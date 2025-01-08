@@ -2,26 +2,20 @@
 export const menuPrincipal  = (botInfo)=> { 
     let {nome_bot, nome_adm, prefixo} = botInfo
     return `|
-|>----〖 *🤖 ${nome_bot?.trim()}®* 〗
-|
-|>---〖🔎 *MENU PRINCIPAL*〗
+|>----〖🤖 *FullDev*〗
 |
 |- Digite um dos comandos abaixo:
 |
-|- *${prefixo}menu* 0  ❓ Informação
-|- *${prefixo}menu* 1  🖼️ Figurinhas
+|- *${prefixo}menu* 1  ❓ Informação
 |- *${prefixo}menu* 2  ⚒️ Utilidades
-|- *${prefixo}menu* 3  📥 Downloads
-|- *${prefixo}menu* 4  👨‍👩‍👧‍👦 Grupo
-|- *${prefixo}menu* 5  🕹️ Diversão/Jogos
-|
-╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`
+|- *${prefixo}menu* 3  👨‍👩‍👧‍👦 Grupo
+|- *${prefixo}menu* 4  🕹️ Diversão/Jogos`
 }
 
 export const menuFigurinhas = (botInfo)=>{
     let {nome_bot, nome_adm, prefixo} = botInfo
     return `|
-|>----〖 *🤖 ${nome_bot?.trim()}®* 〗
+|>----〖🤖 *FullDev*〗
 |
 |>- Guia ❔: *${prefixo}comando* guia
 |
@@ -34,13 +28,13 @@ export const menuFigurinhas = (botInfo)=>{
 |- *${prefixo}ssf* - Transforme uma IMAGEM em *sticker sem fundo*.
 |- *${prefixo}emojimix* 💩+😀 - Tranforme 2 emojis em *sticker*
 |
-╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`
+`
 }
 
 export const menuInfoSuporte = (botInfo)=>{
     let {nome_bot, nome_adm, prefixo} = botInfo
     return `|
-|>----〖 *🤖 ${nome_bot?.trim()}®* 〗
+|>----〖🤖 *FullDev*〗
 |
 |>- Guia ❔: *${prefixo}comando* guia
 |
@@ -50,13 +44,13 @@ export const menuInfoSuporte = (botInfo)=>{
 |- *${prefixo}reportar* mensagem - Reporte um problema para o dono.
 |- *${prefixo}meusdados* - Exibe seus dados de uso .
 |
-╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`
+`
 }
 
 export const menuDownload = (botInfo)=>{
     let {nome_bot, nome_adm, prefixo} = botInfo
     return `|
-|>----〖 *🤖 ${nome_bot?.trim()}®* 〗
+|>----〖🤖 *FullDev*〗
 |
 |>- Guia ❔: *${prefixo}comando* guia
 |
@@ -70,24 +64,18 @@ export const menuDownload = (botInfo)=>{
 |- *${prefixo}tk* link - Faz download de um video do Tiktok e envia.
 |- *${prefixo}img* tema - Faz download de uma imagem e envia.
 |
-╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`
+`
 }
 
 export const menuUtilidades = (botInfo)=>{
     let {nome_bot, nome_adm, prefixo} = botInfo
     return `|
-|>----〖 *🤖 ${nome_bot?.trim()}®* 〗
-|
-|>- Guia ❔: *${prefixo}comando* guia
+|>----〖🤖 *FullDev*〗
 |
 |>---〖⚒️ *UTILITÁRIOS*〗
 |
-|--〖🔎 *CONSULTAS/TEXTO* 〗
-|
 |- *${prefixo}ia* frase - Recebe uma resposta da IA.
-|- *${prefixo}brasileirao* - Exibe a tabela e rodada atual do Brasileirão.
 |- *${prefixo}animes* - Exibe os ultimos lançamentos de animes.
-|- *${prefixo}mangas* - Exibe os ultimos lançamentos de mangás.
 |- *${prefixo}filmes* - Exibe as tendências atuais de filmes.
 |- *${prefixo}series* - Exibe as tendências atuais de séries.
 |- *${prefixo}encurtar* link - Encurta o link digitado.
@@ -100,47 +88,24 @@ export const menuUtilidades = (botInfo)=>{
 |- *${prefixo}calc* expressao - Calcula alguma conta que queira fazer.
 |- *${prefixo}rastreio* código - Rastreamento dos CORREIOS.
 |- *${prefixo}ddd* - Responda alguém para ver o estado/região.
-|- *${prefixo}tabela* -  Mostra tabela com caracteres para criação de nicks.
-|
-|--〖🔊 *AUDIO*〗
-|
-|- *${prefixo}ouvir* - Responda um áudio para transformar em texto.
-|- *${prefixo}audio* tipo_edicao - Responda um audio com este comando para fazer a edição.
-|- *${prefixo}voz* idioma texto - Transforma texto em audio.
-|
-|--〖🖼️ *IMAGENS*〗
-|
-|- *${prefixo}upimg* - Faz upload de uma imagem e retorna o link.
-|- *${prefixo}criarimg* frase - Cria uma imagem de acordo com a frase usando IA.
-|- *${prefixo}rbg* - Retira o fundo de uma IMAGEM.
-|
-|--〖❔ *RECONHECIMENTO*〗
-|
-|- *${prefixo}qualmusica* - Responda um audio/video para identificar a música.
-|- *${prefixo}qualanime* -  Identifica o anime por foto de uma cena.
-|
-╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`
+`
 }
 
 export const menuGrupo = (admin, botInfo)=>{
     let {nome_bot, nome_adm, prefixo} = botInfo
     if(admin){
         return `|
-|>----〖 *🤖 ${nome_bot?.trim()}®* 〗
-|
-|>- Guia ❔: *${prefixo}comando* guia
+|>----〖🤖 *FullDev*〗
 |
 |>---〖👨‍👩‍👧‍👦 *GRUPO*〗
 |
-|--〖🛠️ *GERAL*〗
-|
+|- *${prefixo}adms* - Lista todos administradores.
 |- *${prefixo}status* - Vê os recursos ligados/desligados.
 |- *${prefixo}regras* - Exibe a descrição do grupo com as regras.
-|- *${prefixo}adms* - Lista todos administradores.
-|- *${prefixo}fotogrupo* - Altera foto do grupo
 |- *${prefixo}mt* mensagem - Marca todos MEMBROS/ADMINS com uma mensagem.
 |- *${prefixo}rt* - Responda uma mensagem para retransmitir e marcar todos os membros.
 |- *${prefixo}mm* mensagem - Marca os MEMBROS com uma mensagem.
+|- *${prefixo}fotogrupo* - Altera foto do grupo
 |- *${prefixo}dono* - Mostra dono do grupo.
 |
 |--〖🎚️ *CONTROLE DE ATIVIDADE*〗
@@ -192,12 +157,10 @@ export const menuGrupo = (admin, botInfo)=>{
 |- *${prefixo}enquete* pergunta,opcao1,opcao2,etc.. - Abre uma enquete com uma pergunta e as opçôes.
 |
 |
-╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`
+`
     } else {
         return `|
-|>----〖 *🤖 ${nome_bot?.trim()}®* 〗
-|
-|>- Guia ❔: *${prefixo}comando* guia
+|>----〖🤖 *FullDev*〗
 |
 |>---〖👨‍👩‍👧‍👦 *GRUPO*〗
 |
@@ -209,7 +172,7 @@ export const menuGrupo = (admin, botInfo)=>{
 |--〖📊 *ENQUETE*〗
 |- *${prefixo}enquete* pergunta,opcao1,opcao2,etc.. - Abre uma enquete com uma pergunta e as opçôes.
 |
-╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`
+`
     }
 }
 
@@ -217,9 +180,7 @@ export const menuDiversao = (grupo, botInfo )=>{
     let {nome_bot, nome_adm, prefixo} = botInfo
     if(grupo){
         return `|
-|>----〖 *🤖 ${nome_bot?.trim()}®* 〗
-|
-|>- Guia ❔: *${prefixo}comando* guia
+|>----〖🤖 *FullDev*〗
 |
 |>---〖🕹️ *JOGOS*〗
 |
@@ -241,10 +202,10 @@ export const menuDiversao = (grupo, botInfo )=>{
 |- *${prefixo}par* @pessoa1 @pessoa2 - Mede o nivel de compatibilidade entre 2 pessoas.
 |- *${prefixo}roletarussa* - Expulsa um membro aleatório do grupo.
 |
-╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`
+`
     } else {
         return `|
-|>----〖 *🤖 ${nome_bot?.trim()}®* 〗
+|>----〖🤖 *FullDev*〗
 |
 |>- Guia ❔: *${prefixo}comando* guia
 |
@@ -262,7 +223,7 @@ export const menuDiversao = (grupo, botInfo )=>{
 |
 |
 |
-╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`
+`
     }
 }
 
@@ -336,6 +297,5 @@ export const menuAdmin = (botInfo)=>{
 |- *${prefixo}sairgrupos* - Sai de todos os grupos.
 |- *${prefixo}entrargrupo* link-grupo - BOT entra no grupo.
 |
-╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`
+`
 }
-

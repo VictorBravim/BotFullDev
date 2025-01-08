@@ -537,21 +537,7 @@ export const grupo = async(c, mensagemBaileys, botInfo) => {
                 } catch(err){
                     throw err
                 }
-                break  
-            
-            case 'bantodos':
-                try{
-                    let verificarDono = remetente == dono
-                    if (!verificarDono) return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.apenas_dono_grupo, mensagem)           
-                    if (!bot_admin) return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.bot_admin, mensagem)
-                    for(let membro of participantes){
-                        if (!admins.includes(membro)) await socket.removerParticipante(c, id_grupo, membro)
-                    }
-                    await socket.responderTexto(c, id_chat, comandos_info.grupo.bantodos.msgs.sucesso, mensagem)
-                } catch(err){
-                    throw err
-                }
-                break  
+                break   
             
             case 'add':
                 try{

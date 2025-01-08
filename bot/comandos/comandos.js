@@ -1488,9 +1488,6 @@ export function comandosInfo(botInfo){
             grupos_carregados: '✓ Todos os grupos foram carregados e atualizados.',
             dono_cadastrado: `✅ Seu número foi cadastrado como DONO, agora você pode utilizar os comandos de ${prefixo}admin`,
             cabecalho_guia: `❔ USO DO COMANDO ❔\n\n`,
-            usuario_novo: "[ 🤖 Boas Vindas ao {p1} 🤖]\n\n"+
-            `👋 Olá {p2}, vi que você é um usuário novo para abrir o menu de comandos digite *${prefixo}menu*`,
-            entrada_grupo: "Saudações *{p1}* , se tiverem alguma dúvida só digitar "+`*${prefixo}menu*`,
             cmd_erro: "[❗] Ops, parece que você usou o comando *{p1}* incorretamente ou não sabe como utilizá-lo. Quer aprender a usar?\n\n Digite :\n  - Ex: *{p2} guia* para ver o guia.",
             erro_comando_codigo: "[❗] Houve um erro no comando *{p1}*, relate ao administrador ou tente novamente mais tarde.",
             erro_api : "[❗] Houve um erro no comando *{p1}*.\n\n"+

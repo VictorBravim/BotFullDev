@@ -32,9 +32,9 @@ export class BotControle{
     async criarArquivo(){
         const bot = {
             iniciado: 0,
-            nome_bot: "LBOT",
-            nome_adm: "Leal",
-            nome_pack: "LBOT Stickers",
+            nome_bot: "FullDev",
+            nome_adm: "FullDev",
+            nome_pack: "FullDev Bot",
             prefixo: "!",
             cmds_executados:0,
             autosticker: false,

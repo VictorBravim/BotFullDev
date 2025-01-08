@@ -106,23 +106,23 @@ export const info = async(c, mensagemBaileys, botInfo) => {
                         let usuarioOpcao = texto_recebido
                         let menuResposta = menu.menuPrincipal(botInfo)
                         switch(usuarioOpcao){
-                            case "0":
+                            case "1":
                                 menuResposta = menu.menuInfoSuporte(botInfo)
                                 break
-                            case "1":
+                            case "0":
                                 menuResposta = menu.menuFigurinhas(botInfo)
                                 break
                             case "2":
                                 menuResposta = menu.menuUtilidades(botInfo)
                                 break
-                            case "3":
+                            case "5":
                                 menuResposta = menu.menuDownload(botInfo)
                                 break
-                            case "4":
+                            case "3":
                                 if(mensagem_grupo) menuResposta = menu.menuGrupo(usuario_admin, botInfo)
                                 else return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.grupo, mensagem)
                                 break
-                            case "5":
+                            case "4":
                                 menuResposta = menu.menuDiversao(mensagem_grupo, botInfo)
                                 break
                         }
