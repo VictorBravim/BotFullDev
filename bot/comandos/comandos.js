@@ -436,10 +436,10 @@ export function comandosInfo(botInfo){
                 msgs: {
                     respostas: [' 0%\n\n - ESSE É MACHO ',
                     '██                 20% \n\n - HMMMMM ',
-                    '████             40%\n\n - JÁ MAMOU O PRIMO',
-                    '██████         60%\n\n - EITA MAMOU O BONDE',
-                    '████████     80%\n\n - JÁ SENTOU EM ALGUEM',
-                    '██████████ 100%\n\n - BIXONA ALERTA VERMELHO CUIDADO COM SEUS ORGÃOS SEXUAIS'],
+                    '████             40%\n\n - Glub Glub',
+                    '██████         60%\n\n - EITA Glub Glub Geral',
+                    '████████     80%\n\n - Aguenta Muito',
+                    '██████████ 100%\n\n - ALERTA VERMELHO CUIDADO COM ESSE AQUI '],
                     apenas_um: "[❗] Erro: Apenas um membro por vez deve ser mencionado.",
                     resposta: "🧩 *VIADÔMETRO* - {p1}"
                 }

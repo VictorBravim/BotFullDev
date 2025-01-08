@@ -27,7 +27,6 @@ export const menuFigurinhas = (botInfo)=>{
 |- *${prefixo}simg* - Transforme um STICKER NÃO ANIMADO em *foto*.
 |- *${prefixo}ssf* - Transforme uma IMAGEM em *sticker sem fundo*.
 |- *${prefixo}emojimix* 💩+😀 - Tranforme 2 emojis em *sticker*
-|
 `
 }
 
@@ -43,7 +42,6 @@ export const menuInfoSuporte = (botInfo)=>{
 |- *${prefixo}info* - Informações do bot e contato do dono.
 |- *${prefixo}reportar* mensagem - Reporte um problema para o dono.
 |- *${prefixo}meusdados* - Exibe seus dados de uso .
-|
 `
 }
 
@@ -63,7 +61,6 @@ export const menuDownload = (botInfo)=>{
 |- *${prefixo}tw* link - Faz download de um video/foto do Twitter e envia.
 |- *${prefixo}tk* link - Faz download de um video do Tiktok e envia.
 |- *${prefixo}img* tema - Faz download de uma imagem e envia.
-|
 `
 }
 
@@ -155,8 +152,6 @@ export const menuGrupo = (admin, botInfo)=>{
 |--〖📊 *ENQUETE*〗
 |
 |- *${prefixo}enquete* pergunta,opcao1,opcao2,etc.. - Abre uma enquete com uma pergunta e as opçôes.
-|
-|
 `
     } else {
         return `|
@@ -171,7 +166,6 @@ export const menuGrupo = (admin, botInfo)=>{
 |
 |--〖📊 *ENQUETE*〗
 |- *${prefixo}enquete* pergunta,opcao1,opcao2,etc.. - Abre uma enquete com uma pergunta e as opçôes.
-|
 `
     }
 }
@@ -201,7 +195,6 @@ export const menuDiversao = (grupo, botInfo )=>{
 |- *${prefixo}top5* tema - Ranking dos Top 5 com o tema que você escolher.
 |- *${prefixo}par* @pessoa1 @pessoa2 - Mede o nivel de compatibilidade entre 2 pessoas.
 |- *${prefixo}roletarussa* - Expulsa um membro aleatório do grupo.
-|
 `
     } else {
         return `|
@@ -220,9 +213,6 @@ export const menuDiversao = (grupo, botInfo )=>{
 |- *${prefixo}simi* frase - Recebe uma resposta do SimSimi.
 |- *${prefixo}chance* - Calcula a chance de algo acontecer.
 |- *${prefixo}fch* - Gera uma frase contra a humanidade.
-|
-|
-|
 `
     }
 }
@@ -296,6 +286,5 @@ export const menuAdmin = (botInfo)=>{
 |- *${prefixo}sair* - Sai do grupo.
 |- *${prefixo}sairgrupos* - Sai de todos os grupos.
 |- *${prefixo}entrargrupo* link-grupo - BOT entra no grupo.
-|
 `
 }
