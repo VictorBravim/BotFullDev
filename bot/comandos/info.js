@@ -109,9 +109,6 @@ export const info = async(c, mensagemBaileys, botInfo) => {
                             case "1":
                                 menuResposta = menu.menuInfoSuporte(botInfo)
                                 break
-                            case "0":
-                                menuResposta = menu.menuFigurinhas(botInfo)
-                                break
                             case "2":
                                 menuResposta = menu.menuUtilidades(botInfo)
                                 break

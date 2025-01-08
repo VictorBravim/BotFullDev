@@ -368,50 +368,7 @@ export function comandosInfo(botInfo){
                 }
             }
         },
-        //COMANDOS FIGURINHAS
-        figurinhas: {
-            s: {
-                descricao: '',
-                guia: `Ex: Envie/responda uma *IMAGEM/VIDEO* com *${prefixo}s* - Transforma em sticker.\n`+
-                `Ex: Envie/responda uma *IMAGEM* com *${prefixo}s 1* - Transforma em sticker circular.\n`+
-                `Ex: Envie/responda uma *IMAGEM* com *${prefixo}s 2* - Transforma em sticker sem perder a proporção.\n`,
-                msgs: {
-                    erro_video : '[❗] Envie um video/gif com no máximo 8 segundos.',
-                }
-            },
-            simg: {
-                descricao: '',
-                guia: `Ex: Responda um sticker com *${prefixo}simg* - Transforma o sticker em imagem.\n\n`+
-                `*Obs*: Este comando funciona apenas com *STICKERS NÃO ANIMADOS*.\n`,
-                msgs: {
-                    erro_sticker: `[❗] Este comando é válido apenas para stickers.`
-                }
-            },
-            ssf: {
-                descricao: '',
-                guia: `Ex: Envie/responda uma *imagem* com *${prefixo}ssf* - Retira o fundo da imagem e transforma em sticker.\n\n`+
-                `*Obs*: Este comando funciona apenas com *IMAGENS*.\n`,
-                msgs: {
-                    espera: `[AGUARDE] 📸 O fundo da imagem está sendo removido e o sticker será enviado em breve.`,
-                    erro_imagem: `[❗] Este comando é válido apenas para imagens.`
-                }
-            },
-            emojimix: {
-                descricao: '',
-                guia: `Ex: *${prefixo}emojimix* 💩+😀 - Junta os dois emojis e transforma em sticker.\n\n`+
-                `*Obs*: Nem todos os emojis são compátiveis, então vá tentando fazer combinações.\n`,
-                msgs: {
-                    erro: ''
-                }
-            },
-            snome: {
-                descricao: '',
-                guia: `Ex: Responda um *STICKER* com *${prefixo}snome* pack, autor - Renomeia o nome do pack e do autor do sticker.`,
-                msgs: {
-                    erro: ''
-                }
-            }
-        },
+        
         //COMANDOS DIVERSÃO
         diversao: {
             mascote: {
@@ -994,9 +951,7 @@ export function comandosInfo(botInfo){
             bcmd: {
                 descricao: '',
                 guia: `Ex: *${prefixo}bcmd* ${prefixo}s ${prefixo}sgif ${prefixo}play - Bloqueia no grupo os comandos ${prefixo}s, ${prefixo}sgif e ${prefixo}play (você pode escolher os comandos a sua necessidade).\n\n`+
-                `Ex: *${prefixo}bcmd* figurinhas - Bloqueia todos os comandos da categoria FIGURINHAS.\n\n`+
                 `Ex: *${prefixo}bcmd* utilidades - Bloqueia todos os comandos da categoria UTILIDADES.\n\n`+
-                `Ex: *${prefixo}bcmd* downloads - Bloqueia todos os comandos da categoria DOWNLOADS.\n\n`+
                 `Ex: *${prefixo}bcmd* diversao - Bloqueia todos os comandos da categoria DIVERSÃO.\n\n`+
                 `*Obs* : Você não pode bloquear comandos de administrador.\n`,
                 msgs: {
@@ -1014,9 +969,7 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}dcmd* ${prefixo}s ${prefixo}sgif ${prefixo}play - Desbloqueia no grupo os comandos ${prefixo}s, ${prefixo}sgif e ${prefixo}play.\n\n`+
                 `Ex: *${prefixo}dcmd* todos - Desbloqueia todos os comandos.\n\n`+
-                `Ex: *${prefixo}dcmd* figurinhas - Desbloqueia todos os comandos da categoria FIGURINHAS.\n\n`+
                 `Ex: *${prefixo}dcmd* utilidades - Desbloqueia todos os comandos da categoria UTILIDADES.\n\n`+
-                `Ex: *${prefixo}dcmd* downloads - Desbloqueia todos os comandos da categoria DOWNLOADS.\n\n`+
                 `Ex: *${prefixo}dcmd* diversao - Desbloqueia todos os comandos da categoria DIVERSÃO.\n\n`+
                 `*Obs* : Verifique os comandos que estão bloqueados com *${prefixo}status*.\n`,
                 msgs: {
@@ -1056,9 +1009,7 @@ export function comandosInfo(botInfo){
             bcmdglobal: {
                 descricao: '',
                 guia: `Ex: *${prefixo}bcmdglobal* ${prefixo}s ${prefixo}sgif ${prefixo}play - Bloqueia  os comandos ${prefixo}s, ${prefixo}sgif e ${prefixo}play (você pode escolher os comandos a sua necessidade).\n\n`+
-                `Ex: *${prefixo}bcmdglobal* figurinhas - Bloqueia todos os comandos da categoria FIGURINHAS.\n\n`+
                 `Ex: *${prefixo}bcmdglobal* utilidades - Bloqueia todos os comandos da categoria UTILIDADES.\n\n`+
-                `Ex: *${prefixo}bcmdglobal* downloads - Bloqueia todos os comandos da categoria DOWNLOADS.\n\n`+
                 `Ex: *${prefixo}bcmdglobal* diversao - Bloqueia todos os comandos da categoria DIVERSÃO.\n\n`+
                 `*Obs* : Você não pode bloquear comandos de administrador.\n`,
                 msgs: {
@@ -1076,7 +1027,6 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}dcmdglobal* ${prefixo}s ${prefixo}sgif ${prefixo}play - Desbloqueia  os comandos ${prefixo}s, ${prefixo}sgif e ${prefixo}play.\n\n`+
                 `Ex: *${prefixo}dcmdglobal* todos - Desbloqueia todos os comandos.\n\n`+
-                `Ex: *${prefixo}dcmdglobal* figurinhas - Desbloqueia todos os comandos da categoria FIGURINHAS.\n\n`+
                 `Ex: *${prefixo}dcmdglobal* utilidades - Desbloqueia todos os comandos da categoria UTILIDADES.\n\n`+
                 `Ex: *${prefixo}dcmdglobal* downloads - Desbloqueia todos os comandos da categoria DOWNLOADS.\n\n`+
                 `Ex: *${prefixo}dcmdglobal* diversao - Desbloqueia todos os comandos da categoria DIVERSÃO.\n\n`+
@@ -1186,13 +1136,6 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}nomebot* Teste123 - Muda o nome do *BOT* para *Teste123* e atualiza os menus com o novo nome.\n`,
                 msgs: {
                     sucesso: "✅ O nome do bot foi alterado com sucesso.",
-                }
-            },
-            nomesticker: {
-                descricao: '',
-                guia: `Ex: *${prefixo}nomesticker* Teste123 - Muda o nome do *PACOTE DE STICKERS* para *Teste123* e atualiza os novos stickers com o novo nome.\n`,
-                msgs: {
-                    sucesso: "✅ O nome do pacote de figurinhas foi alterado com sucesso.",
                 }
             },
             nomeadm: {
@@ -1530,8 +1473,6 @@ export function verificarComandoExiste(botInfo, comando, categoria = null){
             ...Object.keys(comandosAtuais.info),
             ...Object.keys(comandosAtuais.grupo),
             ...Object.keys(comandosAtuais.admin),
-            ...Object.keys(comandosAtuais.figurinhas),
-            ...Object.keys(comandosAtuais.downloads),
         ].map(comando => prefixo+comando)
     } else {
         if(!categoriasExistentes.includes(categoria)) return []

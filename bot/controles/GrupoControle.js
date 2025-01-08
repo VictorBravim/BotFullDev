@@ -548,12 +548,12 @@ export class GrupoControle {
         let comandosBloqueados = []
         let grupoInfo = await this.obterGrupoInfo(id_grupo)
         let respostaBloqueio = comandos_info.grupo.bcmd.msgs.resposta_titulo
-        let categorias = ['figurinhas', 'utilidades', 'downloads', 'diversao']
+        let categorias = ['utilidades', 'diversao']
 
         if (categorias.includes(comandos[0])) comandos = Object.keys(comandos_info[comandos[0]]).map(comando => prefixo + comando)
 
         for (let comando of comandos) {
-            if (verificarComandoExiste(botInfo, comando, 'utilidades') || verificarComandoExiste(botInfo, comando, 'diversao') || verificarComandoExiste(botInfo, comando, 'figurinhas') || verificarComandoExiste(botInfo, comando, 'downloads')) {
+            if (verificarComandoExiste(botInfo, comando, 'utilidades') || verificarComandoExiste(botInfo, comando, 'diversao') || verificarComandoExiste(botInfo, comando) || verificarComandoExiste(botInfo, comando)) {
                 if (grupoInfo.block_cmds.includes(comando.replace(prefixo, ''))) {
                     respostaBloqueio += criarTexto(comandos_info.grupo.bcmd.msgs.resposta_variavel.ja_bloqueado, comando)
                 } else {
@@ -577,7 +577,7 @@ export class GrupoControle {
         let comandosDesbloqueados = []
         let grupoInfo = await this.obterGrupoInfo(id_grupo)
         let respostaDesbloqueio = comandos_info.grupo.dcmd.msgs.resposta_titulo
-        let categorias = ['todos', 'figurinhas', 'utilidades', 'downloads', 'diversao']
+        let categorias = ['todos', , 'utilidades', 'downloads', 'diversao']
 
         if (categorias.includes(comandos[0])) {
             if (comandos[0] === 'todos') comandos = grupoInfo.block_cmds.map(comando => prefixo + comando)

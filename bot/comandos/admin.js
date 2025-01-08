@@ -345,17 +345,6 @@ export const admin = async(c, mensagemBaileys, botInfo) => {
                 }
                 break
 
-            case "nomesticker":
-                try{
-                    if(!args.length) return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo), mensagem)
-                    let usuarioTexto = texto_recebido
-                    await bot.alterarNomeFigurinhas(usuarioTexto, botInfo)
-                    await socket.responderTexto(c, id_chat, comandos_info.admin.nomesticker.msgs.sucesso, mensagem)
-                } catch(err){
-                    throw err
-                }
-                break
-
             case "prefixo":
                 try{
                     if(!args.length) return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo), mensagem)

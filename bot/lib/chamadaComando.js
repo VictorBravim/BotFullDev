@@ -8,8 +8,6 @@ import {utilidades as utilidadesComandos} from '../comandos/utilidades.js'
 import {diversao as diversaoComandos} from '../comandos/diversao.js'
 import {admin as adminComandos} from '../comandos/admin.js'
 import {info as infoComandos} from '../comandos/info.js'
-import {figurinhas as figurinhasComandos, autoSticker} from '../comandos/figurinhas.js'
-import {downloads as downloadsComandos} from '../comandos/downloads.js'
 import {comandosInfo, verificarComandoExiste, obterGuiaComando} from '../comandos/comandos.js'
 import PQueue from 'p-queue';
 const queueMensagem = new PQueue({concurrency: 6, timeout: 60000})
@@ -48,13 +46,6 @@ export const chamadaComando = async (c, mensagemBaileys, botInfo) => {
                 await utilidadesComandos(c, mensagemBaileys, botInfo)
                 consoleComando(mensagem_grupo, "UTILIDADES", comando, "#de9a07", t, nome_usuario, nome_grupo)
             }, {priority: 1})
-        }  else if(verificarComandoExiste(botInfo, comando, 'figurinhas')){
-            //FIGURINHAS
-            queueMensagem.add(async()=>{
-                if(msgGuia) return await socket.responderTexto(c,id_chat, obterGuiaComando("figurinhas", comando, botInfo), mensagem)
-                await figurinhasComandos(c, mensagemBaileys, botInfo)
-                consoleComando(mensagem_grupo, "FIGURINHAS", comando, "#ae45d1", t, nome_usuario, nome_grupo)
-            }, {priority: 2})
         } else if(verificarComandoExiste(botInfo, comando, 'downloads')){
             //DOWNLOADS
             queueMensagem.add(async()=>{
@@ -90,12 +81,6 @@ export const chamadaComando = async (c, mensagemBaileys, botInfo) => {
                 await infoComandos(c, mensagemBaileys, botInfo)
                 consoleComando(mensagem_grupo, "INFO", comando, "#8ac46e", t, nome_usuario, nome_grupo)
             }, {priority: 3})
-        } else if(autoStickerPv || autoStickerGrupo){
-            //AUTO-STICKER PV OU GRUPO
-            queueMensagem.add(async()=>{
-                await autoSticker(c, mensagemBaileys, botInfo)
-                consoleComando(mensagem_grupo, "FIGURINHAS", "AUTO-STICKER", "#ae45d1", t, nome_usuario, nome_grupo)
-            }, {priority: 2})
         }
 
     } catch (err) {

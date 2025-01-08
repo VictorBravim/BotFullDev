@@ -12,58 +12,6 @@ export const menuPrincipal  = (botInfo)=> {
 |- *${prefixo}menu* 4  🕹️ Diversão/Jogos`
 }
 
-export const menuFigurinhas = (botInfo)=>{
-    let {nome_bot, nome_adm, prefixo} = botInfo
-    return `|
-|>----〖🤖 *FullDev*〗
-|
-|>- Guia ❔: *${prefixo}comando* guia
-|
-|>---〖🖼️ *FIGURINHAS*〗
-|
-|- *${prefixo}s* - Transfome uma IMAGEM/VIDEO em *sticker*.
-|- *${prefixo}s* 1 - Transfome uma IMAGEM em *sticker circular*.
-|- *${prefixo}snome* pack, autor - Renomeia o sticker.
-|- *${prefixo}simg* - Transforme um STICKER NÃO ANIMADO em *foto*.
-|- *${prefixo}ssf* - Transforme uma IMAGEM em *sticker sem fundo*.
-|- *${prefixo}emojimix* 💩+😀 - Tranforme 2 emojis em *sticker*
-`
-}
-
-export const menuInfoSuporte = (botInfo)=>{
-    let {nome_bot, nome_adm, prefixo} = botInfo
-    return `|
-|>----〖🤖 *FullDev*〗
-|
-|>- Guia ❔: *${prefixo}comando* guia
-|
-|>---〖❓ *INFO/SUPORTE*〗
-|
-|- *${prefixo}info* - Informações do bot e contato do dono.
-|- *${prefixo}reportar* mensagem - Reporte um problema para o dono.
-|- *${prefixo}meusdados* - Exibe seus dados de uso .
-`
-}
-
-export const menuDownload = (botInfo)=>{
-    let {nome_bot, nome_adm, prefixo} = botInfo
-    return `|
-|>----〖🤖 *FullDev*〗
-|
-|>- Guia ❔: *${prefixo}comando* guia
-|
-|>---〖📥 *DOWNLOADS*〗
-|
-|- *${prefixo}play* nome- Faz download de uma música e envia.
-|- *${prefixo}yt* nome - Faz download de um video do Youtube e envia.
-|- *${prefixo}fb* link - Faz download de um video do Facebook e envia.
-|- *${prefixo}ig* link - Faz download de videos/fotos do Instagram e envia.
-|- *${prefixo}tw* link - Faz download de um video/foto do Twitter e envia.
-|- *${prefixo}tk* link - Faz download de um video do Tiktok e envia.
-|- *${prefixo}img* tema - Faz download de uma imagem e envia.
-`
-}
-
 export const menuUtilidades = (botInfo)=>{
     let {nome_bot, nome_adm, prefixo} = botInfo
     return `|
@@ -143,7 +91,6 @@ export const menuGrupo = (admin, botInfo)=>{
 |- *${prefixo}link* - Exibe o link do grupo.
 |- *${prefixo}rlink* - Redefine o link do grupo.
 |- *${prefixo}apg* - Apaga uma mensagem do grupo.
-|- *${prefixo}bantodos* - Bane todos os membros.
 |
 |--〖👁️ *REVELAR MENSAGENS*〗
 |
@@ -227,7 +174,6 @@ export const menuAdmin = (botInfo)=>{
 |
 |- *${prefixo}nomebot* nome - Altera nome do bot e atualiza menus
 |- *${prefixo}nomeadm* nome - Altera nome do administrador e atualiza menus
-|- *${prefixo}nomesticker* nome - Altera nome do pacote de figurinhas
 |- *${prefixo}prefixo* simbolo - Altera o prefixo dos comandos
 |- *${prefixo}fotobot* - Altera foto do BOT
 |- *${prefixo}estado* online, offline ou manutencao - Altera o estado atual do bot.

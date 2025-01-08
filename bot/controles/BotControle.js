@@ -174,12 +174,12 @@ export class BotControle{
         const {prefixo} = botInfo
         let comandosBloqueados = []
         let respostaBloqueio = comandos_info.admin.bcmdglobal.msgs.resposta_titulo
-        let categorias = ['figurinhas', 'utilidades', 'downloads', 'diversao']
+        let categorias = ['utilidades', 'diversao']
 
         if(categorias.includes(usuarioComandos[0])) usuarioComandos = Object.keys(comandos_info[usuarioComandos[0]]).map(comando => prefixo+comando)
 
         for(let comando of usuarioComandos){
-            if(verificarComandoExiste(botInfo, comando, 'utilidades') || verificarComandoExiste(botInfo, comando, 'diversao') || verificarComandoExiste(botInfo, comando, 'figurinhas') || verificarComandoExiste(botInfo, comando, 'downloads')){
+            if(verificarComandoExiste(botInfo, comando, 'utilidades') || verificarComandoExiste(botInfo, comando, 'diversao') || verificarComandoExiste(botInfo, comando) || verificarComandoExiste(botInfo, comando)){
                 if(botInfo.bloqueio_cmds.includes(comando.replace(prefixo, ''))){
                     respostaBloqueio += criarTexto(comandos_info.admin.bcmdglobal.msgs.resposta_variavel.ja_bloqueado, comando)
                 } else {
@@ -203,7 +203,7 @@ export class BotControle{
         const {prefixo} = botInfo
         let comandosDesbloqueados = []
         let respostaDesbloqueio = comandos_info.admin.dcmdglobal.msgs.resposta_titulo
-        let categorias = ['todos', 'figurinhas', 'utilidades', 'downloads', 'diversao']
+        let categorias = ['todos', 'utilidades', 'diversao']
 
         if(categorias.includes(usuarioComandos[0])){
             if(usuarioComandos[0] === 'todos') usuarioComandos = botInfo.bloqueio_cmds.map(comando => prefixo+comando)
@@ -350,12 +350,6 @@ export class BotControle{
     async alterarNomeAdm(nome, botInfo){
         let bot = botInfo
         bot.nome_adm = nome
-        await this.bot.atualizarDados(bot)
-    }
-
-    async alterarNomeFigurinhas(nome, botInfo){
-        let bot = botInfo
-        bot.nome_pack = nome
         await this.bot.atualizarDados(bot)
     }
 }
