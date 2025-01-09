@@ -10,7 +10,7 @@ export default function configSocket (state, cacheTentativasEnvio, versaoWaWeb){
             keys: makeCacheableSignalKeyStore(state.keys, pino({level : "silent"}))
         },
         version : versaoWaWeb,
-        msgRetryCounterCache : cacheTentativasEnvio,
+        msgRetryCounterCache : cacheTentativasEnvio, 
         defaultQueryTimeoutMs: undefined,
         syncFullHistory: true,
         logger: pino({level : "silent"}),
