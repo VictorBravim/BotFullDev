@@ -11,6 +11,7 @@ import {downloadMediaMessage} from '@whiskeysockets/baileys'
 import os from 'node:os'
 import {comandosInfo} from '../comandos/comandos.js'
 
+
 export const admin = async(c, mensagemBaileys, botInfo) => {
     //Atribuição de valores
     const bot = new BotControle()
@@ -654,4 +655,5 @@ export const admin = async(c, mensagemBaileys, botInfo) => {
         err.message = `${comando} - ${err.message}`
         consoleErro(err, "ADMIN")
     }
+    
 }

@@ -4,6 +4,8 @@ import * as socket from '../baileys/socket.js'
 import { consoleErro, criarTexto } from '../lib/util.js'
 import moment from "moment-timezone"
 import { tiposMensagem } from '../baileys/mensagem.js'
+import { UsuarioControle } from './UsuarioControle.js'
+
 
 export class GrupoControle {
 
@@ -375,7 +377,8 @@ export class GrupoControle {
             consoleErro(err, "ANTI-LINK")
             return true
         }
-    }    
+    }
+    
 
     //Recurso AUTO-STICKER
     async alterarAutoSticker(id_grupo, status = true) {

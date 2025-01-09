@@ -1,5 +1,5 @@
 export function comandosInfo(botInfo){
-    let {prefixo, nome_bot} = botInfo
+    let {prefixo, nome_adm, nome_bot} = botInfo
     const comandos = {
         //COMANDOS INFO
         info: {
@@ -51,7 +51,7 @@ export function comandosInfo(botInfo){
                     "*Comandos executados* : {p4}\n"+
                     "*Contato do criador* : wa.me/{p5}\n"+
                     "*Versão atual* : {p6}\n"+
-                    "*GitHub* : https://github.com/victorsouzaleal/lbot-whatsapp\n"
+                    ""
                 }
             }
         },
@@ -739,6 +739,8 @@ export function comandosInfo(botInfo){
                 `Ex: *${prefixo}mt* mensagem - Marca todos os *MEMBROS/ADMIN* do grupo com uma mensagem.\n`,
                 msgs: {
                     resposta: "〘 🤖 Marquei os *{p1}* membros/admins 〙\n",
+                    resposta_motivo: "〘 🤖 Marquei os *{p1}* membros/admins 〙\n\n"+
+                    "Mensagem: *{p2}*\n"
                 }
             },
             mm: {
@@ -763,6 +765,7 @@ export function comandosInfo(botInfo){
                 `Ex: *${prefixo}adms* - Marca os *ADMINISTRADORES* do grupo.\n`,
                 msgs: {
                     resposta_titulo: "〘 🤖 Marquei os *{p1}* admins 〙\n\n",
+                    mensagem: "Mensagem: *{p1}* \n\n",
                     resposta_itens: "➸ @{p1}\n",
                 }
             },
@@ -771,7 +774,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}enquete* tema,opcao1,opcao2,opcao3 - Cria uma enquete com um tema e as opções de voto.\n`,  
                 msgs: {
                     min_opcao: "[❗] A enquete precisa de no mínimo 2 opçôes",
-                    aberta: "✅ Enquete criada",
+                    aberta: "✅ A enquete foi aberta com sucesso",
                 }
             },
             dono: {
@@ -786,8 +789,8 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}mutar* - Liga/desliga a execução de comandos dos membros.\n`,
                 msgs: {
-                    ligado: "✅ O Grupo foi mutado",
-                    desligado: "✅ O Grupo foi desmutado"
+                    ligado: "✅ O recurso de MUTAR GRUPO foi ativado com sucesso",
+                    desligado: "✅ O recurso de MUTAR GRUPO foi desativado com sucesso"
                 }
             },
             link: {
@@ -816,9 +819,9 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}alink* - Liga/desliga o antilink e apaga a mensagem de quem postar qualquer tipo de link.\n`,
                 msgs: {
                     motivo: "Banido pelo ANTI-LINK",
-                    detectou: "🤖 Ei @{p1}, o ANTI-LINK está ativado e um possível link foi detectado na sua mensagem, leia as regras da comunidade para mais informações.",
-                    ligado: "✅ ANTI-LINK Ativado",
-                    desligado: "✅ ANTI-LINK Desativado"
+                    detectou: "🤖 Ei @{p1}, o ANTI-LINK está ativado e um possível link foi detectado na sua mensagem, ela foi apagada por segurança.",
+                    ligado: "✅ O recurso de ANTI-LINK foi ativado com sucesso",
+                    desligado: "✅ O recurso de ANTI-LINK foi desativado com sucesso"
                 }
             },
             autosticker: {
@@ -834,12 +837,12 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}bv*  - Liga/desliga a mensagem de bem-vindo para novos membros.\n\n`+
                 `Ex: *${prefixo}bv* mensagem - Liga a mensagem de bem-vindo com uma mensagem da sua escolha.\n`,
                 msgs: {
-                    ligado: "✅ O recurso de boas vindas foi ativado",
-                    desligado: "✅ O recurso de boas vindas foi desativado",
+                    ligado: "✅ O recurso de boas vindas foi ativado com sucesso",
+                    desligado: "✅ O recurso de boas vindas foi desativado com sucesso",
                     mensagem: "👋 Olá, @{p1}\n"+
                     "Seja bem vindo(a) ao grupo *{p2}*\n\n"+
                     "{p3}"+
-                    "Digite !regras para ver as regras do grupo."
+                    "Digite "+`*${prefixo}menu*`+" para ver os comandos."
                 }
             },
             afake: {
@@ -871,6 +874,14 @@ export function comandosInfo(botInfo){
                 guia: `Ex: Responder com *${prefixo}apg* - Apaga a mensagem que foi respondida com esse comando.\n\n`+
                 `*Obs* : O bot precisa ser administrador.\n`,
                 msgs: {}
+            },
+            bantodos: {
+                descricao: '',
+                guia: `Ex: *${prefixo}bantodos* - Bane todos os membros do grupo.\n\n`+
+                `*Obs* : Apenas o dono do grupo pode usar este comando.\n`,
+                msgs: {
+                    sucesso: '🤖✅ Todos banidos com sucesso.'
+                }
             },
             topativos: {
                 descricao: '',
@@ -1043,7 +1054,8 @@ export function comandosInfo(botInfo){
                     "*Nome do bot* : {p2}\n"+
                     "*Online desde* : {p3}\n"+
                     "*Versão* : {p4}\n"+
-                    "",
+                    "*GitHub* : https://github.com/victorsouzaleal/lbot-whatsapp\n"+
+                    "-------------------\n",
                     resposta_variavel:{
                         limite_diario: {
                             on: "*Limite diário* : ✅\n"+

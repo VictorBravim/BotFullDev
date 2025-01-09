@@ -7,6 +7,8 @@ import {UsuarioControle} from '../controles/UsuarioControle.js'
 import {tiposMensagem} from '../baileys/mensagem.js'
 import {comandosInfo} from '../comandos/comandos.js'
 
+
+
 export const info = async(c, mensagemBaileys, botInfo) => {
     //Atribuição de valores
     const usuarios = new UsuarioControle()
@@ -104,20 +106,20 @@ export const info = async(c, mensagemBaileys, botInfo) => {
                         let usuarioOpcao = texto_recebido
                         let menuResposta = menu.menuPrincipal(botInfo)
                         switch(usuarioOpcao){
-                            case "7":
+                            case "15":
                                 menuResposta = menu.menuInfoSuporte(botInfo)
                                 break
                             case "1":
                                 menuResposta = menu.menuUtilidades(botInfo)
                                 break
-                            case "5":
+                            case "16":
                                 menuResposta = menu.menuDownload(botInfo)
                                 break
                             case "2":
                                 if(mensagem_grupo) menuResposta = menu.menuGrupo(usuario_admin, botInfo)
                                 else return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.grupo, mensagem)
                                 break
-                            case "4":
+                            case "17":
                                 menuResposta = menu.menuDiversao(mensagem_grupo, botInfo)
                                 break
                         }
@@ -133,4 +135,6 @@ export const info = async(c, mensagemBaileys, botInfo) => {
         err.message = `${comando} - ${err.message}`
         consoleErro(err, "INFO")
     }
+    
+
 }

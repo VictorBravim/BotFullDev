@@ -7,6 +7,7 @@ import { tiposMensagem } from '../baileys/mensagem.js'
 import {comandosInfo} from '../comandos/comandos.js'
 import {UsuarioControle} from '../controles/UsuarioControle.js'
 
+
 export const diversao = async(c, mensagemBaileys, botInfo) => {
     //Atribuição de valores
     const comandos_info = comandosInfo(botInfo)
