@@ -1,6 +1,6 @@
 
 export const menuPrincipal  = (botInfo)=> { 
-    let {nome_bot, nome_adm, prefixo} = botInfo
+    let {prefixo} = botInfo
     return `|
 |>----〖🤖 *FullDev*〗
 |
@@ -8,36 +8,25 @@ export const menuPrincipal  = (botInfo)=> {
 |
 |- *${prefixo}menu* 1  ❓ Informação
 |- *${prefixo}menu* 2  ⚒️ Utilidades
-|- *${prefixo}menu* 3  👨‍👩‍👧‍👦 Grupo
-|- *${prefixo}menu* 4  🕹️ Diversão/Jogos`
+|- *${prefixo}menu* 3  👨‍👩‍👧‍👦 Grupo`
 }
 
 export const menuUtilidades = (botInfo)=>{
-    let {nome_bot, nome_adm, prefixo} = botInfo
+    let {prefixo} = botInfo
     return `|
 |>----〖🤖 *FullDev*〗
 |
 |>---〖⚒️ *UTILITÁRIOS*〗
 |
 |- *${prefixo}ia* frase - Recebe uma resposta da IA.
-|- *${prefixo}animes* - Exibe os ultimos lançamentos de animes.
-|- *${prefixo}filmes* - Exibe as tendências atuais de filmes.
-|- *${prefixo}series* - Exibe as tendências atuais de séries.
-|- *${prefixo}encurtar* link - Encurta o link digitado.
-|- *${prefixo}letra* musica - Envia a letra da música digitada.
 |- *${prefixo}traduz* idioma texto - Traduz um texto para o idioma escolhido.
 |- *${prefixo}pesquisa* texto - Faz uma rápida pesquisa na internet.
-|- *${prefixo}clima* cidade - Mostra a temperatura atual.
-|- *${prefixo}noticias* - Obtem noticias atuais.
-|- *${prefixo}moeda* tipo valor - Converte o valor de uma determinada moeda para outras.
 |- *${prefixo}calc* expressao - Calcula alguma conta que queira fazer.
-|- *${prefixo}rastreio* código - Rastreamento dos CORREIOS.
-|- *${prefixo}ddd* - Responda alguém para ver o estado/região.
 `
 }
 
 export const menuGrupo = (admin, botInfo)=>{
-    let {nome_bot, nome_adm, prefixo} = botInfo
+    let {prefixo} = botInfo
     if(admin){
         return `|
 |>----〖🤖 *FullDev*〗
@@ -53,24 +42,10 @@ export const menuGrupo = (admin, botInfo)=>{
 |- *${prefixo}fotogrupo* - Altera foto do grupo
 |- *${prefixo}dono* - Mostra dono do grupo.
 |
-|--〖🎚️ *CONTROLE DE ATIVIDADE*〗
-|
-|- *${prefixo}contador* - Liga/desliga o contador de atividade (Mensagens).
-|- *${prefixo}atividade* @marcarmembro - Mostra a atividade do usuário no grupo. 
-|- *${prefixo}imarcar* 1-50 - Marca todos os inativos com menos de 1 até 50 mensagens.
-|- *${prefixo}ibanir* 1-50 - Bane todos os inativos com  menos de 1 até 50 mensagens.
-|- *${prefixo}topativos* 1-50 - Marca os membros mais ativos em um ranking de 1-50 pessoas.
-|
 |--〖🚫 *BLOQUEIO DE COMANDOS*〗
 |
 |- *${prefixo}bcmd* [comando1 comando2 etc] - Bloqueia os comandos escolhidos no grupo.
 |- *${prefixo}dcmd* [comando1 comando2 etc] - Desbloqueia os comandos escolhidos no grupo.
-|
-|--〖🗒️ *LISTA NEGRA*〗
-|
-|- *${prefixo}listanegra* - Exibe a lista negra do grupo.
-|- *${prefixo}addlista* +55 (21) 9xxxx-xxxx - Adiciona o número na lista negra do grupo.
-|- *${prefixo}remlista* +55 (21) 9xxxx-xxxx - Remove o número na lista negra do grupo.
 |
 |--〖🧰 *RECURSOS*〗 
 |
@@ -111,126 +86,6 @@ export const menuGrupo = (admin, botInfo)=>{
 |- *${prefixo}adms* - Lista todos administradores.
 |- *${prefixo}dono* - Mostra dono do grupo.
 |
-|--〖📊 *ENQUETE*〗
-|- *${prefixo}enquete* pergunta,opcao1,opcao2,etc.. - Abre uma enquete com uma pergunta e as opçôes.
 `
     }
-}
-
-export const menuDiversao = (grupo, botInfo )=>{
-    let {nome_bot, nome_adm, prefixo} = botInfo
-    if(grupo){
-        return `|
-|>----〖🤖 *FullDev*〗
-|
-|>---〖🕹️ *JOGOS*〗
-|
-|- *${prefixo}ppt* pedra, papel ou tesoura - Joga o pedra, papel ou tesoura.
-|- *${prefixo}caracoroa* - Decide no cara ou coroa.
-|
-|>---〖🧩 *DIVERSÃO*〗
-|
-|- *${prefixo}mascote* - Exibe o mascote.
-|- *${prefixo}simi* frase - Recebe uma resposta do SimSimi.
-|- *${prefixo}viadometro* - Mede o nível de viadagem de alguma pessoa.
-|- *${prefixo}detector* - Detecta mentiras utilizando uma IA avançada.
-|- *${prefixo}casal* - Seleciona aleatoriamente um casal.
-|- *${prefixo}fch* - Gera uma frase contra a humanidade.
-|- *${prefixo}gadometro* - Mencione um membro ou responda ele para descobrir.
-|- *${prefixo}chance* - Calcula a chance de algo acontecer.
-|- *${prefixo}bafometro* - Mede o nível de álcool de uma pessoa.
-|- *${prefixo}top5* tema - Ranking dos Top 5 com o tema que você escolher.
-|- *${prefixo}par* @pessoa1 @pessoa2 - Mede o nivel de compatibilidade entre 2 pessoas.
-|- *${prefixo}roletarussa* - Expulsa um membro aleatório do grupo.
-`
-    } else {
-        return `|
-|>----〖🤖 *FullDev*〗
-|
-|>- Guia ❔: *${prefixo}comando* guia
-|
-|>---〖🕹️ *JOGOS*〗
-|
-|- *${prefixo}ppt* pedra, papel ou tesoura - Joga o Pedra, papel ou tesoura.
-|- *${prefixo}caracoroa* - Decide no cara ou coroa.
-|
-|>---〖🧩 *DIVERSÃO*〗
-|
-|- *${prefixo}mascote* - Exibe o mascote.
-|- *${prefixo}simi* frase - Recebe uma resposta do SimSimi.
-|- *${prefixo}chance* - Calcula a chance de algo acontecer.
-|- *${prefixo}fch* - Gera uma frase contra a humanidade.
-`
-    }
-}
-
-export const menuAdmin = (botInfo)=>{
-    let {nome_bot, nome_adm, prefixo} = botInfo
-    return `|>---〖⚙️ *ADMINISTRAÇÃO*〗
-|
-|>- Guia ❔: *${prefixo}comando* guia
-|
-|--〖🎨 *CUSTOMIZAÇÃO*〗
-|
-|- *${prefixo}nomebot* nome - Altera nome do bot e atualiza menus
-|- *${prefixo}nomeadm* nome - Altera nome do administrador e atualiza menus
-|- *${prefixo}prefixo* simbolo - Altera o prefixo dos comandos
-|- *${prefixo}fotobot* - Altera foto do BOT
-|- *${prefixo}estado* online, offline ou manutencao - Altera o estado atual do bot.
-|
-|--〖🛠️ *GERAL*〗
-|
-|- *${prefixo}infobot* - Informação completa do BOT.
-|- *${prefixo}ping* - Informação do sistema e de tempo de resposta.
-|- *${prefixo}bloquear* @usuario  - Bloqueia o usuário mencionado.
-|- *${prefixo}desbloquear* @usuario  - Desbloqueia o usuário mencionado.
-|- *${prefixo}listablock*  - Lista todos os usuários bloqueados.
-|- *${prefixo}bcgrupos* mensagem - Faz um anúncio com uma mensagem somente para os GRUPOS.
-|- *${prefixo}desligar* - Desliga o bot.
-|
-|--〖👤 *USUÁRIOS*〗
-|
-|- *${prefixo}verdados* @usuario - Mostra os dados do usuario cadastrado no bot.
-|- *${prefixo}usuarios* tipo - Mostra todos os usuários do tipo escolhido.
-|- *${prefixo}tipos* - Mostra todos os tipos de usuário disponíveis.
-|- *${prefixo}novotipo* tipo, titulo, comandos - Cria um novo tipo de usuário.
-|- *${prefixo}tipotitulo* tipo, titulo - Altera o titulo de um tipo de usuário.
-|- *${prefixo}deltipo* tipo - Deleta um tipo de usuário.
-|- *${prefixo}usuariotipo* tipo @usuario - Muda o tipo de conta do usuário.
-|- *${prefixo}limpartipo* tipo - Limpa todos os usuários desse tipo e transforma em usuarios comuns.
-|
-|--〖🚫 *BLOQUEIO DE COMANDOS*〗 
-|
-|- *${prefixo}bcmdglobal* comando1 comando2 - Bloqueia os comandos escolhidos globalmente.
-|- *${prefixo}dcmdglobal* comando1 comando2 - Desbloqueia os comandos escolhidos globalmente.
-|
-|--〖👤 *LIMITE DIÁRIO COMANDOS*〗
-|
-|- *${prefixo}limitediario* - Ativa/desativa o limite diario de comandos por dia de acordo com tipo de usuário.
-|- *${prefixo}tipocomandos* tipo qtd-comandos - Muda o limite de comandos por dia de um tipo de usuário.
-|- *${prefixo}rtodos* - Reseta os comandos diários de todos usuários.
-|- *${prefixo}r* @usuario - Reseta os comandos diários de um usuário.
-|
-|--〖👤 *TAXA COMANDOS POR MINUTO*〗
-|
-|- *${prefixo}taxacomandos* qtd-comandos - Ativa/desativa a taxa de comandos por minuto.
-|
-|--〖👁️ *REVELAR MENSAGENS*〗
-|
-|- *${prefixo}autorevelar* - Ativa/desativa a revelação automatica de mensagens de visualização única.
-|- *${prefixo}revelar* - Revela o contéudo de uma mensagem de visualização única.
-|
-|--〖🎚️ *CONTROLE*〗
-|
-|- *${prefixo}pvliberado* - Ativa/desativa os comandos em mensagens privadas.
-|- *${prefixo}autostickerpv* - Ativa/desativa a criação automática de stickers no privado.
-|
-|--〖👨‍👩‍👧‍👦 *GRUPOS*〗
-|
-|- *${prefixo}grupos* - Mostra os grupos atuais.
-|- *${prefixo}linkgrupo* numero - Mostra o link do grupo selecionado.
-|- *${prefixo}sair* - Sai do grupo.
-|- *${prefixo}sairgrupos* - Sai de todos os grupos.
-|- *${prefixo}entrargrupo* link-grupo - BOT entra no grupo.
-`
 }
