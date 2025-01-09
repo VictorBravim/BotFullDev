@@ -130,4 +130,3 @@ export async function criarArquivosNecessarios(){
           throw new Error(err)
       }
 }
-

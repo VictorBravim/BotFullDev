@@ -156,5 +156,3 @@ export const atualizacaoDadosGrupo = async (dadosGrupo)=>{
         consoleErro(err, "GROUPS.UPDATE")
     }
 }
-
-
