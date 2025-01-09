@@ -31,10 +31,6 @@ export const chamadaComando = async (c, mensagemBaileys, botInfo) => {
         const msgGuia = (!args.length) ? false : args[0] === "guia"
         const queueMensagemEspera = queueMensagem.size > 10
 
-        //Verificação do Auto-Sticker
-        const autoStickerPv = (!mensagem_grupo && (tipo == tiposMensagem.imagem || tipo == tiposMensagem.video) && botInfo.autosticker)
-        const autoStickerGrupo = (mensagem_grupo && (tipo == tiposMensagem.imagem || tipo == tiposMensagem.video) && grupo?.autosticker)
-
         //Verificação se há mensagens em espera na fila
         if(queueMensagemEspera) await socket.responderTexto(c, id_chat, criarTexto(comandos_info.outros.fila_comando, queueMensagem.size), mensagem)
         

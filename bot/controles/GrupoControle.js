@@ -4,8 +4,6 @@ import * as socket from '../baileys/socket.js'
 import { consoleErro, criarTexto } from '../lib/util.js'
 import moment from "moment-timezone"
 import { tiposMensagem } from '../baileys/mensagem.js'
-import { UsuarioControle } from './UsuarioControle.js'
-
 
 export class GrupoControle {
 
@@ -338,16 +336,34 @@ export class GrupoControle {
             const { corpo, legenda, remetente, id_chat, mensagem_grupo, mensagem, grupo } = mensagemBaileys
             const usuarioTexto = corpo || legenda
             const { id_grupo, admins, bot_admin } = { ...grupo }
+            
+            // Validações iniciais
             if (!mensagem_grupo) return true
             if (!grupo?.antilink) return true
-
+    
+            // Desativa o anti-link se o bot não for admin
             if (!bot_admin) {
                 await this.alterarAntiLink(id_grupo, false)
             } else {
+                // Verifica se há texto na mensagem
                 if (usuarioTexto) {
-                    const textoComUrl = usuarioTexto.match(new RegExp(/(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?/img))
-                    if (textoComUrl && !admins.includes(remetente)) {
-                        await socket.enviarTextoComMencoes(c, id_chat, criarTexto(comandos_info.grupo.alink.msgs.detectou, remetente.replace("@s.whatsapp.net", "")), [remetente])
+                    // Detecta links de grupos do WhatsApp
+                    const linkWhatsApp = usuarioTexto.match(new RegExp(/https:\/\/chat\.whatsapp\.com\/[A-Za-z0-9]{20,}/g))
+                    
+                    // Se um link de grupo do WhatsApp for detectado e o remetente não for admin
+                    if (linkWhatsApp && !admins.includes(remetente)) {
+                        // Notifica o grupo e menciona o remetente
+                        await socket.enviarTextoComMencoes(
+                            c, 
+                            id_chat, 
+                            criarTexto(
+                                comandos_info.grupo.alink.msgs.detectou, 
+                                remetente.replace("@s.whatsapp.net", "")
+                            ), 
+                            [remetente]
+                        )
+                        
+                        // Exclui a mensagem
                         await socket.deletarMensagem(c, mensagem)
                         return false
                     }
@@ -359,7 +375,7 @@ export class GrupoControle {
             consoleErro(err, "ANTI-LINK")
             return true
         }
-    }
+    }    
 
     //Recurso AUTO-STICKER
     async alterarAutoSticker(id_grupo, status = true) {

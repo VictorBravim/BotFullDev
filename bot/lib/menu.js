@@ -6,9 +6,8 @@ export const menuPrincipal  = (botInfo)=> {
 |
 |- Digite um dos comandos abaixo:
 |
-|- *${prefixo}menu* 1  ❓ Informação
-|- *${prefixo}menu* 2  ⚒️ Utilidades
-|- *${prefixo}menu* 3  👨‍👩‍👧‍👦 Grupo`
+|- *${prefixo}menu* 1  ⚒️ Utilidades
+|- *${prefixo}menu* 2  👨‍👩‍👧‍👦 Grupo`
 }
 
 export const menuUtilidades = (botInfo)=>{

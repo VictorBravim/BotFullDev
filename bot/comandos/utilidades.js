@@ -6,7 +6,6 @@ import {tiposMensagem} from '../baileys/mensagem.js'
 import {downloadMediaMessage } from '@whiskeysockets/baileys'
 import {comandosInfo} from '../comandos/comandos.js'
 
-
 export const utilidades = async(c, mensagemBaileys, botInfo) => {
     //Atribuição de valores
     const comandos_info = comandosInfo(botInfo)

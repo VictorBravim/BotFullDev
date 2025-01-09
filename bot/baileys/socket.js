@@ -64,8 +64,6 @@ export const obterContatosBloqueados = async(c)=>{
     return await c.fetchBlocklist()
 }
 
-
-
 // Envio de mensagens
 export const enviarTexto = async(c, id_chat, texto)=>{
     await atualizarPresenca(c, id_chat, "composing")
@@ -245,7 +243,3 @@ export const rebaixarParticipante = async(c, id_grupo, participante)=>{
     let resposta = await c.groupParticipantsUpdate(id_grupo, [participante], "demote")
     return resposta[0]
 }
-
-
-
-

@@ -160,10 +160,4 @@ export class Grupo{
     async obterMaioresContagens(id_grupo){
         return await db.contador.findAsync({id_grupo}).sort({msg: -1})
     }
-
-
-
-
-
-    
 }
